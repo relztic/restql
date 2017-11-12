@@ -1,0 +1,18 @@
+# Yarn
+yarn-debug.log
+yarn-error.log
+yarn.lock
+
+# Mixed
+.github
+.idea
+.DS_Store
+.babelrc
+.travis.yml
+
+# Production
+linters
+src
+
+# Testing
+coverage

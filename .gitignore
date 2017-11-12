@@ -1,0 +1,21 @@
+# Node.js
+node_modules
+
+# npm
+npm-debug.log
+package-lock.json
+
+# Yarn
+yarn-debug.log
+yarn-error.log
+yarn.lock
+
+# Mixed
+.idea
+.DS_Store
+
+# Development
+lib
+
+# Testing
+coverage

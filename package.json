@@ -1,0 +1,62 @@
+{
+  "name": "restql",
+  "version": "0.1.0",
+  "description": "RESTful API Resolver for Nested-Linked Resources | :spider_web: :spider:",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "npm run build:clean && npm run build:lib",
+    "build:clean": "rimraf ./lib/*",
+    "build:lib": "babel --ignore \"*.test.js\" --out-dir ./lib ./src",
+    "code": "babel-node ./src/index.js",
+    "lint": "npm run lint:es && npm run lint:markdown",
+    "lint:es": "eslint --config ./linters/.eslintrc ./src",
+    "lint:es:fix": "npm run lint:es -- --fix",
+    "lint:markdown": "markdownlint --config ./linters/.markdownlint.json $(find . -type f -name \"*.md\" -not \\( -path \"./.github/*\" -o -path \"./node_modules/*\" \\))",
+    "test": "npm run test:code:coverage",
+    "test:code": "jest",
+    "test:code:coverage": "npm run test:code -- --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/relztic/restql.git"
+  },
+  "keywords": [
+    "library",
+    "rest",
+    "api",
+    "resolver",
+    "javascript",
+    "node",
+    "npm",
+    "yarn"
+  ],
+  "author": "Ariel de Jesús Díaz Sánchez <relztic@gmail.com> (https://www.linkedin.com/in/relztic)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/relztic/restql/issues"
+  },
+  "homepage": "https://github.com/relztic/restql#readme",
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "lodash": "^4.17.4",
+    "node-fetch": "^1.7.3",
+    "url-regex": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.3.2",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "markdownlint-cli": "^0.4.1",
+    "rimraf": "^2.6.2"
+  }
+}
