@@ -4,10 +4,10 @@ RESTful API Resolver for Nested-Linked Resources | :spider_web: :spider:
 
 ---
 
-[![npm version](https://badge.fury.io/js/restql.svg)](https://badge.fury.io/js/restql)
-[![Build Status](https://travis-ci.org/relztic/restql.svg?branch=master)](https://travis-ci.org/relztic/restql)
-[![Maintainability](https://api.codeclimate.com/v1/badges/6411a3b2ccf0c91cadd4/maintainability)](https://codeclimate.com/github/relztic/restql/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/6411a3b2ccf0c91cadd4/test_coverage)](https://codeclimate.com/github/relztic/restql/test_coverage)
+[![npm version](https://img.shields.io/npm/v/restql.svg)](https://www.npmjs.com/package/restql)
+[![Build Status](https://img.shields.io/travis/relztic/restql/master.svg)](https://travis-ci.org/relztic/restql)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/relztic/restql.svg)](https://codeclimate.com/github/relztic/restql/maintainability)
+[![Test Coverage](https://img.shields.io/codeclimate/c/relztic/restql.svg)](https://codeclimate.com/github/relztic/restql/test_coverage)
 
 RestQL allows you to dynamically resolve the nested-linked resources of a RESTful API.
 
