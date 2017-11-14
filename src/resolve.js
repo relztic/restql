@@ -14,7 +14,7 @@ import objectSet from './utils/objectSet';
  * @param {Object} resolver The resolver to apply.
  * @returns {Promise<Object>} A promise which resolves into an object.
  * @throws {InvalidArgumentError} If a resource is invalid.
- * @throws {RuntimeError} If a resource couldn't be fetched.
+ * @throws {RuntimeError}         If a resource couldn't be fetched.
  */
 export default async function resolve(resource, resolver) {
   if (!isResource(resource)) {
