@@ -21,7 +21,7 @@ export default function objectGet(obj, props) {
   }
 
   if (!(prop in obj)) {
-    throw new Error(`RuntimeError: could not be got \`${prop}\``);
+    throw new Error(`RuntimeError: could not get property \`${prop}\``);
   }
 
   const nextObjs = obj[prop];

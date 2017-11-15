@@ -14,17 +14,17 @@ import objectSet from './utils/objectSet';
  * @param {Object} resolver The resolver to apply.
  * @returns {Promise<Object>} A promise which resolves into an object.
  * @throws {InvalidArgumentError} If a resource is invalid.
- * @throws {RuntimeError}         If a resource couldn't be fetched.
+ * @throws {RuntimeError}         If a resource could not be fetched.
  */
 export default async function resolve(resource, resolver) {
   if (!isResource(resource)) {
-    throw new Error(`InvalidArgumentError: \`resource\` (${resource})`);
+    throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``);
   }
 
   const response = await fetch(resource);
 
   if (!response.ok) {
-    throw new Error(`RuntimeError: couldn't be fetched (${resource})`);
+    throw new Error(`RuntimeError: could not fetch resource \`${resource}\``);
   }
 
   const obj = await response.json();

@@ -29,7 +29,7 @@ describe('objectGet', () => {
 
     const received = () => { objectGet(obj, props); };
 
-    const expected = 'RuntimeError: could not be got `e`';
+    const expected = 'RuntimeError: could not get property `e`';
 
     expect(received).toThrow(expected);
   });
