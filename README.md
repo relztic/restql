@@ -112,5 +112,6 @@ const resolver = {
   - Support for a `query` param.
   - Support for custom authentication.
   - Ability to cache responses.
+  - Remove package dependencies.
 
 Until next time... Take :cake:, Folks! :taco: :horse: :dash:
