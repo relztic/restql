@@ -27,6 +27,51 @@ npm install --save restql
 yarn add restql
 ```
 
+## Parameters
+
+### `resource`
+
+`{string} The resource to fetch.`
+
+**e.g.:**
+
+```js
+'https://pokeapi.co/api/v2/pokemon/1'
+```
+
+### `resolver`
+
+`{Object} The resolver to apply.`
+
+**e.g.:**
+
+```js
+{
+  'abilities[].ability.url': {
+    'generation.url': {
+      'main_region.url': null,
+    },
+  },
+  'stats[].stat.url': {
+    'affecting_natures.increase[].url': null,
+    'affecting_natures.decrease[].url': null,
+  },
+  'moves[].move.url': null,
+}
+```
+
+At each level, each property describes a path to the nested resources within the current one.
+
+Resolving the sames and calling the subsequent resolver on them...
+
+Until the base case (`null`) is reached; from which it returns back the merged responses.
+
+#### Quantifiers
+
+| Quantifier | Description               |
+| ---------- | ------------------------- |
+| `[]`       | Collection of properties. |
+
 ## Usage
 
 ```js
