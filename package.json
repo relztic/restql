@@ -1,6 +1,6 @@
 {
   "name": "restql",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "RESTful API Resolver for Nested-Linked Resources | :spider_web: :spider:",
   "main": "./lib/index.js",
   "scripts": {
