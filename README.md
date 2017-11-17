@@ -33,6 +33,10 @@ yarn add restql
 
 `{string} The resource to fetch.`
 
+**Description**
+
+Self-explanatory.
+
 **e.g.:**
 
 ```js
