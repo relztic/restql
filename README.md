@@ -43,6 +43,20 @@ yarn add restql
 
 `{Object} The resolver to apply.`
 
+**Description**
+
+At each level, each property describes a path to the nested resources within the current one.
+
+RestQL resolves the sames and call the subsequent resolver against them...
+
+Until the base case (`null`) is reached; from which it returns back the merged responses.
+
+**Quantifiers**
+
+| Quantifier | Description               |
+| ---------- | ------------------------- |
+| `[]`       | Collection of properties. |
+
 **e.g.:**
 
 ```js
@@ -59,18 +73,6 @@ yarn add restql
   'moves[].move.url': null,
 }
 ```
-
-At each level, each property describes a path to the nested resources within the current one.
-
-Resolving the sames and calling the subsequent resolver on them...
-
-Until the base case (`null`) is reached; from which it returns back the merged responses.
-
-#### Quantifiers
-
-| Quantifier | Description               |
-| ---------- | ------------------------- |
-| `[]`       | Collection of properties. |
 
 ## Usage
 
