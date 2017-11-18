@@ -8,5 +8,5 @@ import urlRegex from 'url-regex';
  * @returns {boolean} Whether or not the resource is valid.
  */
 export default function isResource(resource) {
-  return (urlRegex({ exact: true }).test(resource));
+  return urlRegex({ exact: true }).test(resource);
 }
