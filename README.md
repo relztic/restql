@@ -114,7 +114,7 @@ const resolver = {
 
 ## Roadmap
 
-  - Update package dependencies.
+  - ~~Update package dependencies.~~
   - Support for a `query` param.
   - Support for optional resolvers.
   - Ability to cache responses.
