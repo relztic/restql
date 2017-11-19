@@ -1,5 +1,5 @@
 // External packages.
-import _ from 'lodash';
+import __merge from 'lodash.merge';
 import fetch from 'node-fetch';
 
 // Internal packages.
@@ -47,5 +47,5 @@ export default async function resolve(resource, resolver) {
     return [props, data];
   }));
 
-  return responses.reduce((result, [props, data]) => _.merge(result, objectSet(data, props)), obj);
+  return responses.reduce((result, [props, data]) => __merge(result, objectSet(data, props)), obj);
 }
