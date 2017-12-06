@@ -5,13 +5,13 @@
   "main": "./lib/index.js",
   "scripts": {
     "build": "npm run build:clean && npm run build:lib",
-    "build:clean": "rm -fr ./lib/*",
-    "build:lib": "babel --ignore \"*.test.js\" --out-dir ./lib ./src",
+    "build:clean": "rm -fr ./lib",
+    "build:lib": "babel ./src --ignore \"*.test.js\" --out-dir ./lib",
     "code": "babel-node ./src/index.js",
     "lint": "npm run lint:es && npm run lint:markdown",
-    "lint:es": "eslint --config ./linters/.eslintrc ./src",
+    "lint:es": "eslint ./src --config ./linters/.eslintrc",
     "lint:es:fix": "npm run lint:es -- --fix",
-    "lint:markdown": "markdownlint --config ./linters/.markdownlint.json $(find . -type f -name \"*.md\" -not \\( -path \"./.github/*\" -o -path \"./node_modules/*\" \\))",
+    "lint:markdown": "markdownlint $(find . -type f -name \"*.md\" -not \\( -path \"./.github/*\" -o -path \"./node_modules/*\" \\)) --config ./linters/.markdownlint.json",
     "test": "npm run test:code:coverage",
     "test:code": "jest",
     "test:code:coverage": "npm run test:code -- --coverage"
