@@ -18,7 +18,7 @@ By specifying a set of properties to describe the paths.
 ### npm
 
 ```sh
-npm install --save restql
+npm install restql --save
 ```
 
 ### Yarn
