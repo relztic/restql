@@ -8,10 +8,11 @@ yarn.lock
 .idea
 .DS_Store
 .babelrc
+.eslintrc
+.markdownlint.json
 .travis.yml
 
 # Production
-linters
 src
 
 # Testing
