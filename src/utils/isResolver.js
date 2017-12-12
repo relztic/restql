@@ -1,5 +1,5 @@
 // Internal packages.
-import constants from '../constants';
+import constants from '../constants'
 
 /**
  * Determines whether or not the resolver is valid.
@@ -9,13 +9,13 @@ import constants from '../constants';
  */
 export default function isResolver(resolver) {
   if (!resolver) {
-    return true;
+    return true
   }
 
-  const keys = Object.keys(resolver);
+  const keys = Object.keys(resolver)
 
   if (!keys.length) {
-    return false;
+    return false
   }
 
   return keys
@@ -24,5 +24,5 @@ export default function isResolver(resolver) {
       !key.startsWith(constants.PROP_DELIMITER) &&
       !key.endsWith(constants.PROP_DELIMITER) &&
       isResolver(resolver[key])))
-    .reduce((result, val) => (result && val), true);
+    .reduce((result, val) => (result && val), true)
 }

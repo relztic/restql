@@ -1,5 +1,5 @@
 // Internal packages.
-import isResolver from '../isResolver';
+import isResolver from '../isResolver'
 
 describe('isResolver', () => {
   it('should return `true` on valid resolvers', () => {
@@ -10,10 +10,10 @@ describe('isResolver', () => {
       ' bar.foo ': {
         ' foo.bar ': null,
       },
-    };
+    }
 
-    expect(isResolver(resolver)).toBe(true);
-  });
+    expect(isResolver(resolver)).toBe(true)
+  })
 
   it('should return `false` on invalid resolvers', () => {
     const resolver = {
@@ -23,14 +23,14 @@ describe('isResolver', () => {
       '.bar foo.': {
         '.foo bar.': null,
       },
-    };
+    }
 
-    expect(isResolver(resolver)).toBe(false);
-  });
+    expect(isResolver(resolver)).toBe(false)
+  })
 
   it('should return `false` on empty resolvers', () => {
-    const resolver = {};
+    const resolver = {}
 
-    expect(isResolver(resolver)).toBe(false);
-  });
-});
+    expect(isResolver(resolver)).toBe(false)
+  })
+})

@@ -1,5 +1,5 @@
 // External packages.
-import urlRegex from 'url-regex';
+import urlRegex from 'url-regex'
 
 /**
  * Determines whether or not the resource is valid.
@@ -8,5 +8,5 @@ import urlRegex from 'url-regex';
  * @returns {boolean} Whether or not the resource is valid.
  */
 export default function isResource(resource) {
-  return urlRegex({ exact: true }).test(resource);
+  return urlRegex({ exact: true }).test(resource)
 }

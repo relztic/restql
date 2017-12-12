@@ -1,6 +1,6 @@
 // Internal packages.
-import resolve from './resolve';
-import isResolver from './utils/isResolver';
+import resolve from './resolve'
+import isResolver from './utils/isResolver'
 
 /**
  * Resolves the nested-linked resources of a RESTful API.
@@ -12,8 +12,8 @@ import isResolver from './utils/isResolver';
  */
 export default async function restql(resource, resolver) {
   if (!isResolver(resolver)) {
-    throw new Error(`InvalidArgumentError: invalid resolver \`${JSON.stringify(resolver)}\``);
+    throw new Error(`InvalidArgumentError: invalid resolver \`${JSON.stringify(resolver)}\``)
   }
 
-  return resolve(resource, resolver);
+  return resolve(resource, resolver)
 }

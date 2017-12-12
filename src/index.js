@@ -1,4 +1,4 @@
 // Internal packages.
-import restql from './restql';
+import restql from './restql'
 
-module.exports = restql;
+module.exports = restql

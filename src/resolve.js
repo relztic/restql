@@ -1,11 +1,11 @@
 // External packages.
-import __merge from 'lodash.merge';
-import fetch from 'node-fetch';
+import __merge from 'lodash.merge'
+import fetch from 'node-fetch'
 
 // Internal packages.
-import isResource from './utils/isResource';
-import objectGet from './utils/objectGet';
-import objectSet from './utils/objectSet';
+import isResource from './utils/isResource'
+import objectGet from './utils/objectGet'
+import objectSet from './utils/objectSet'
 
 /**
  * Resolves the nested-linked resources of a RESTful API.
@@ -18,34 +18,34 @@ import objectSet from './utils/objectSet';
  */
 export default async function resolve(resource, resolver) {
   if (!isResource(resource)) {
-    throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``);
+    throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``)
   }
 
-  const response = await fetch(resource);
+  const response = await fetch(resource)
 
   if (!response.ok) {
-    throw new Error(`RuntimeError: could not fetch resource \`${resource}\``);
+    throw new Error(`RuntimeError: could not fetch resource \`${resource}\``)
   }
 
-  const obj = await response.json();
+  const obj = await response.json()
 
   if (!resolver) {
-    return obj;
+    return obj
   }
 
-  const resourcesObj = Object.keys(resolver).map(props => ({ [props]: objectGet(obj, props) }));
+  const resourcesObj = Object.keys(resolver).map(props => ({ [props]: objectGet(obj, props) }))
 
-  const resourcesArr = Object.entries(resourcesObj.reduce((result, val) => ({ ...result, ...val }), {}));
+  const resourcesArr = Object.entries(resourcesObj.reduce((result, val) => ({ ...result, ...val }), {}))
 
   const responses = await Promise.all(resourcesArr.map(async ([props, resources]) => {
-    const nextResolver = resolver[props];
+    const nextResolver = resolver[props]
 
     const data = (Array.isArray(resources))
       ? await Promise.all(resources.map(async nextResource => resolve(nextResource, nextResolver)))
-      : await resolve(resources, nextResolver);
+      : await resolve(resources, nextResolver)
 
-    return [props, data];
-  }));
+    return [props, data]
+  }))
 
-  return responses.reduce((result, [props, data]) => __merge(result, objectSet(data, props)), obj);
+  return responses.reduce((result, [props, data]) => __merge(result, objectSet(data, props)), obj)
 }
