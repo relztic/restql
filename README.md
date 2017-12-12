@@ -82,9 +82,9 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 
 ```js
 // External packages.
-import restql from 'restql';
+import restql from 'restql'
 
-const resource = 'https://pokeapi.co/api/v2/pokemon/1';
+const resource = 'https://pokeapi.co/api/v2/pokemon/1'
 
 const resolver = {
   'abilities[].ability.url': {
@@ -97,19 +97,17 @@ const resolver = {
     'affecting_natures.decrease[].url': null,
   },
   'moves[].move.url': null,
-};
+}
 
-/* eslint-disable no-console */
 (async () => {
   try {
-    const result = await restql(resource, resolver);
+    const result = await restql(resource, resolver)
 
-    console.log(result);
+    console.log(result)
   } catch (error) {
-    console.log(error.message);
+    console.log(error.message)
   }
-})();
-/* eslint-enable no-console */
+})()
 ```
 
 ## Roadmap
@@ -120,4 +118,4 @@ const resolver = {
   - Ability to cache responses.
   - Support for custom authentication.
 
-Until next time... Take :cake:, Folks! :taco: :horse: :dash:
+Take :cake:, Folks! :taco: :horse: :dash:
