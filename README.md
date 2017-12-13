@@ -112,10 +112,10 @@ const resolver = {
 
 ## Roadmap
 
-  - ~~Update package dependencies.~~
-  - Support for a `query` param.
-  - Support for optional resolvers.
-  - Ability to cache responses.
-  - Support for custom authentication.
+  - ~~Update package dependencies~~
+  - Ability to cache responses
+  - Support for optional resolvers
+  - Support for authentication
+  - Support for a `query` param
 
 Take :cake:, Folks! :taco: :horse: :dash:
