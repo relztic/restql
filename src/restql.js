@@ -1,4 +1,4 @@
-// Internal packages.
+// Internal packages
 import resolve from './resolve'
 import isResolver from './utils/isResolver'
 

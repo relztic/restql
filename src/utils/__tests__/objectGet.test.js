@@ -1,4 +1,4 @@
-// Internal packages.
+// Internal packages
 import objectGet from '../objectGet'
 
 const obj = {

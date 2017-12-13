@@ -1,8 +1,8 @@
-// External packages.
+// External packages
 import __merge from 'lodash.merge'
 import fetch from 'node-fetch'
 
-// Internal packages.
+// Internal packages
 import isResource from './utils/isResource'
 import objectGet from './utils/objectGet'
 import objectSet from './utils/objectSet'
