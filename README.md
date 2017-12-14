@@ -81,7 +81,7 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 ## Usage
 
 ```js
-// External packages.
+// External packages
 import restql from 'restql'
 
 const resource = 'https://pokeapi.co/api/v2/pokemon/1'
@@ -97,7 +97,7 @@ const resolver = {
     'affecting_natures.decrease[].url': null,
   },
   'moves[].move.url': null,
-}
+};
 
 (async () => {
   try {
