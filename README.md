@@ -105,7 +105,7 @@ const resolver = {
 
     console.log(result)
   } catch (error) {
-    console.log(error.message)
+    console.error(error.message)
   }
 })()
 ```
