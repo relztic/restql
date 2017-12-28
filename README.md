@@ -133,7 +133,7 @@ const options = {
 ## Roadmap
 
   - ~~Update package dependencies~~
-  - Support for authentication
+  - ~~Support for authentication~~
   - Support for optional resolvers
   - Ability to cache responses
   - Support for a `query` param
