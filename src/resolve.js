@@ -1,6 +1,6 @@
 // External packages
 import __merge from 'lodash.merge'
-import fetch from 'node-fetch'
+import request from 'request-promise-native'
 
 // Internal packages
 import isResource from './utils/isResource'
@@ -12,22 +12,23 @@ import objectSet from './utils/objectSet'
  *
  * @param {string} resource The resource to fetch.
  * @param {Object} resolver The resolver to apply.
+ * @param {Object} options  The options to bypass.
  * @returns {Promise<Object>} A promise which resolves into an object.
  * @throws {InvalidArgumentError} If a resource is invalid.
  * @throws {RuntimeError}         If a resource could not be fetched.
  */
-export default async function resolve(resource, resolver) {
+export default async function resolve(resource, resolver, options = {}) {
   if (!isResource(resource)) {
     throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``)
   }
 
-  const response = await fetch(resource)
+  const response = await request(resource, options)
 
-  if (!response.ok) {
+  if (!response) {
     throw new Error(`RuntimeError: could not fetch resource \`${resource}\``)
   }
 
-  const obj = await response.json()
+  const obj = JSON.parse(response)
 
   if (!resolver) {
     return obj
@@ -41,8 +42,8 @@ export default async function resolve(resource, resolver) {
     const nextResolver = resolver[props]
 
     const data = (Array.isArray(resources))
-      ? await Promise.all(resources.map(async nextResource => resolve(nextResource, nextResolver)))
-      : await resolve(resources, nextResolver)
+      ? await Promise.all(resources.map(async nextResource => resolve(nextResource, nextResolver, options)))
+      : await resolve(resources, nextResolver, options)
 
     return [props, data]
   }))
