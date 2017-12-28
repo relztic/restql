@@ -113,11 +113,15 @@ const resolver = {
     'affecting_natures.decrease[].url': null,
   },
   'moves[].move.url': null,
+}
+
+const options = {
+  // ...
 };
 
 (async () => {
   try {
-    const result = await restql(resource, resolver)
+    const result = await restql(resource, resolver, options)
 
     console.log(result)
   } catch (error) {
