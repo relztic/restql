@@ -78,6 +78,22 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 }
 ```
 
+### `options`
+
+`{Object} The options to bypass.`
+
+**Description**
+
+[`request(options, callback)`](https://github.com/request/request#requestoptions-callback)
+
+**e.g.:**
+
+```js
+{
+  // ...
+}
+```
+
 ## Usage
 
 ```js
