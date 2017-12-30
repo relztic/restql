@@ -78,7 +78,7 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 }
 ```
 
-### `options`
+### `[options]`
 
 `{Object} The options to bypass.`
 
