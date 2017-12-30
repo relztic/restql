@@ -4,7 +4,7 @@ import constants from '../constants'
 /**
  * Determines whether or not the resolver is valid.
  *
- * @param {Object} resolver The resolver to apply.
+ * @param {Object} resolver The resolver to test.
  * @returns {boolean} Whether or not the resolver is valid.
  */
 export default function isResolver(resolver) {
