@@ -60,21 +60,22 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 | Quantifier | Description               |
 | ---------- | ------------------------- |
 | `[]`       | Collection of properties. |
+| `?`        | Optional property.        |
 
 **e.g.:**
 
 ```js
 {
-  'abilities[].ability.url': {
+  'abilities[]?.ability.url': {
     'generation.url': {
       'main_region.url': null,
     },
   },
-  'stats[].stat.url': {
+  'stats[].stat.url?': {
     'affecting_natures.increase[].url': null,
     'affecting_natures.decrease[].url': null,
   },
-  'moves[].move.url': null,
+  'moves[].move?.url': null,
 }
 ```
 
