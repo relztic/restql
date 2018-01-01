@@ -11,7 +11,7 @@ import constants from '../constants'
 export default function objectSet(data, props) {
   const nextPropsArr = props.split(constants.PROP_DELIMITER)
 
-  const [, prop, isArr] = constants.REGEX_PROP_IS_ARR.exec(nextPropsArr.shift()) || []
+  const [, prop, isArr] = constants.REGEX_PROP_IS_ARR_IS_OPT.exec(nextPropsArr.shift()) || []
 
   const nextProps = nextPropsArr.join(constants.PROP_DELIMITER)
 

@@ -3,22 +3,22 @@ import objectGet from '../objectGet'
 
 const obj = {
   a: [
-    { b: [{ c: [1, -1] }, { c: [2, -2] }, { c: [3, -3] }] },
-    { b: [{ c: [4, -4] }, { c: [5, -5] }, { c: [6, -6] }] },
-    { b: [{ c: [7, -7] }, { c: [8, -8] }, { c: [9, -9] }] },
+    { b: [{ c: [1, -1] }, {}, { c: [3, -3] }] },
+    {},
+    { b: [{ c: [7, -7] }, {}, { c: [9, -9] }] },
   ],
 }
 
 describe('objectGet', () => {
   it('should return an array on valid args', () => {
-    const props = 'a[].b[].c'
+    const props = 'a[].b[]?.c?'
 
     const received = objectGet(obj, props)
 
     const expected = [
-      [[1, -1], [2, -2], [3, -3]],
-      [[4, -4], [5, -5], [6, -6]],
-      [[7, -7], [8, -8], [9, -9]],
+      [[1, -1], null, [3, -3]],
+      [],
+      [[7, -7], null, [9, -9]],
     ]
 
     expect(received).toEqual(expected)

@@ -18,6 +18,10 @@ import objectSet from './utils/objectSet'
  * @throws {RuntimeError}         If a resource could not be fetched.
  */
 export default async function resolve(resource, resolver, options) {
+  if (!resource) {
+    return null
+  }
+
   if (!isResource(resource)) {
     throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``)
   }

@@ -12,7 +12,7 @@ import constants from '../constants'
 export default function objectGet(obj, props) {
   const nextPropsArr = props.split(constants.PROP_DELIMITER)
 
-  const [, prop, isArr] = constants.REGEX_PROP_IS_ARR.exec(nextPropsArr.shift()) || []
+  const [, prop, isArr, isOpt] = constants.REGEX_PROP_IS_ARR_IS_OPT.exec(nextPropsArr.shift()) || []
 
   const nextProps = nextPropsArr.join(constants.PROP_DELIMITER)
 
@@ -21,6 +21,12 @@ export default function objectGet(obj, props) {
   }
 
   if (!(prop in obj)) {
+    if (isOpt) {
+      return (isArr)
+        ? []
+        : null
+    }
+
     throw new Error(`RuntimeError: could not get property \`${prop}\``)
   }
 
