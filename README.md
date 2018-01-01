@@ -104,16 +104,16 @@ import restql from 'restql'
 const resource = 'https://pokeapi.co/api/v2/pokemon/1'
 
 const resolver = {
-  'abilities[].ability.url': {
+  'abilities[]?.ability.url': {
     'generation.url': {
       'main_region.url': null,
     },
   },
-  'stats[].stat.url': {
+  'stats[].stat.url?': {
     'affecting_natures.increase[].url': null,
     'affecting_natures.decrease[].url': null,
   },
-  'moves[].move.url': null,
+  'moves[].move?.url': null,
 }
 
 const options = {
