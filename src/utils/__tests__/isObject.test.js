@@ -19,6 +19,8 @@ describe('isObject', () => {
 
     expect(isObject('')).toBe(false)
 
+    expect(isObject(Symbol(''))).toBe(false)
+
     expect(isObject(() => {})).toBe(false)
 
     expect(isObject([])).toBe(false)
