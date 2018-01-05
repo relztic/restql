@@ -4,7 +4,7 @@
 >
 > **e.g.:**
 >
-> As a `<type_of_user>`, I want `<some_goal>` so that `<some_reason>`.
+> As a `<type-of-user>`, I want `<some-goal>` so that `<some-reason>`.
 
 ### Conditions of Satisfaction
 
