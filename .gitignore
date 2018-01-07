@@ -13,7 +13,7 @@ yarn-error.log
 .idea
 .DS_Store
 
-# Development
+# Production
 lib
 
 # Testing

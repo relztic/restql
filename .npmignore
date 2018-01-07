@@ -12,7 +12,7 @@ yarn.lock
 .markdownlint.json
 .travis.yml
 
-# Production
+# Development
 src
 
 # Testing
