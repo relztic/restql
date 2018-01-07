@@ -1,3 +1,11 @@
+### [Affects Version]
+
+> Generally used for the version of your software which is being affected by an issue.
+>
+> **e.g.:**
+>
+> `v<major>.<minor>.<patch>`
+
 ### User Story
 
 > Short, simple description of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system.
