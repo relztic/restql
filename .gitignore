@@ -13,8 +13,11 @@ yarn-error.log
 .idea
 .DS_Store
 
-# Production
-lib
-
-# Testing
+# Coverage
 coverage
+
+# Production
+dist
+
+# rollup.js
+stats.html

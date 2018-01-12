@@ -27,6 +27,12 @@ npm install restql --save
 yarn add restql
 ```
 
+### CDN
+
+```html
+<script src="https://unpkg.com/restql/dist/umd/index.min.js"></script>
+```
+
 ## Parameters
 
 ### `resource`
@@ -85,7 +91,7 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 
 **Description**
 
-[`request(options, callback)`](https://github.com/request/request#requestoptions-callback)
+[`Request Config`](https://github.com/axios/axios#request-config)
 
 **e.g.:**
 

@@ -1,6 +1,6 @@
 // External packages
-import __merge from 'lodash.merge'
-import request from 'request-promise-native'
+import axios from 'axios'
+import merge from 'lodash/merge'
 
 // Internal packages
 import isResource from './utils/isResource'
@@ -26,13 +26,13 @@ export default async function resolve(resource, resolver, options) {
     throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``)
   }
 
-  const response = await request(resource, options)
+  const response = await axios(resource, options)
 
-  if (!response) {
+  if (!response.config.validateStatus(response.status)) {
     throw new Error(`RuntimeError: could not fetch resource \`${resource}\``)
   }
 
-  const obj = JSON.parse(response)
+  const obj = response.data
 
   if (!resolver) {
     return obj
@@ -52,5 +52,5 @@ export default async function resolve(resource, resolver, options) {
     return [props, data]
   }))
 
-  return responses.reduce((result, [props, data]) => __merge(result, objectSet(data, props)), obj)
+  return responses.reduce((result, [props, data]) => merge(result, objectSet(data, props)), obj)
 }

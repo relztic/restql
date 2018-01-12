@@ -1,4 +1,4 @@
 // Internal packages
 import restql from './restql'
 
-module.exports = restql
+export default restql
