@@ -142,7 +142,7 @@ const options = {
   - ~~Update package dependencies~~
   - ~~Support for authentication~~
   - ~~Support for optional resolvers~~
+  - ~~Improve package bundler~~
   - Ability to cache responses
-  - Support for a `query` param
 
 Take :cake:, Folks! :taco: :horse: :dash:
