@@ -1,4 +1,4 @@
-// External packages
+// External Packages
 import urlRegex from 'url-regex'
 
 /**

@@ -1,8 +1,9 @@
-// Internal packages
+// Internal Packages
 import objectSet from '../objectSet'
 
 describe('objectSet', () => {
   it('should return an object on valid args', () => {
+    // prettier-ignore
     const data = [
       [[1, -1], [2, -2], [3, -3]],
       [[4, -4], [5, -5], [6, -6]],
@@ -13,6 +14,7 @@ describe('objectSet', () => {
 
     const received = objectSet(data, props)
 
+    // prettier-ignore
     const expected = {
       a: [
         { b: [{ c: [1, -1] }, { c: [2, -2] }, { c: [3, -3] }] },

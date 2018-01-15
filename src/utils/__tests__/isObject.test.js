@@ -1,4 +1,4 @@
-// Internal packages
+// Internal Packages
 import isObject from '../isObject'
 
 describe('isObject', () => {

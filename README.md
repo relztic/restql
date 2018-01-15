@@ -4,10 +4,11 @@ RESTful API Resolver for Nested-Linked Resources | :spider_web: :spider:
 
 ---
 
-[![npm](https://img.shields.io/npm/v/restql.svg)](https://www.npmjs.com/package/restql)
-[![build](https://img.shields.io/travis/relztic/restql/master.svg)](https://travis-ci.org/relztic/restql)
-[![maintainability](https://img.shields.io/codeclimate/maintainability/relztic/restql.svg)](https://codeclimate.com/github/relztic/restql/maintainability)
-[![coverage](https://img.shields.io/codeclimate/c/relztic/restql.svg)](https://codeclimate.com/github/relztic/restql/test_coverage)
+[![npm](https://img.shields.io/npm/v/restql.svg?style=flat-square)](https://www.npmjs.com/package/restql/)
+[![build](https://img.shields.io/travis/relztic/restql/master.svg?style=flat-square)](https://travis-ci.org/relztic/restql/)
+[![maintainability](https://img.shields.io/codeclimate/maintainability/relztic/restql.svg?style=flat-square)](https://codeclimate.com/github/relztic/restql/maintainability/)
+[![coverage](https://img.shields.io/codeclimate/c/relztic/restql.svg?style=flat-square)](https://codeclimate.com/github/relztic/restql/test_coverage/)
+[![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier/)
 
 RestQL allows you to dynamically resolve the nested-linked resources of a RESTful API.
 
@@ -46,7 +47,7 @@ Self-explanatory.
 **e.g.:**
 
 ```js
-'https://pokeapi.co/api/v2/pokemon/1'
+'https://pokeapi.co/api/v2/pokemon/1/'
 ```
 
 ### `resolver`
@@ -91,7 +92,7 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 
 **Description**
 
-[`Request Config`](https://github.com/axios/axios#request-config)
+[`Request Config`](https://github.com/axios/axios/#request-config)
 
 **e.g.:**
 
@@ -104,10 +105,10 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 ## Usage
 
 ```js
-// External packages
+// External Packages
 import restql from 'restql'
 
-const resource = 'https://pokeapi.co/api/v2/pokemon/1'
+const resource = 'https://pokeapi.co/api/v2/pokemon/1/'
 
 const resolver = {
   'abilities[]?.ability.url': {

@@ -1,8 +1,8 @@
-// External packages
+// External Packages
 import axios from 'axios'
 import merge from 'lodash/merge'
 
-// Internal packages
+// Internal Packages
 import isResource from './utils/isResource'
 import objectGet from './utils/objectGet'
 import objectSet from './utils/objectSet'
@@ -42,15 +42,17 @@ export default async function resolve(resource, resolver, options) {
 
   const resourcesArr = Object.entries(resourcesObj.reduce((result, val) => ({ ...result, ...val }), {}))
 
-  const responses = await Promise.all(resourcesArr.map(async ([props, resources]) => {
-    const nextResolver = resolver[props]
+  const responses = await Promise.all(
+    resourcesArr.map(async ([props, resources]) => {
+      const nextResolver = resolver[props]
 
-    const data = (Array.isArray(resources))
-      ? await Promise.all(resources.map(async nextResource => resolve(nextResource, nextResolver, options)))
-      : await resolve(resources, nextResolver, options)
+      const data = Array.isArray(resources)
+        ? await Promise.all(resources.map(async nextResource => resolve(nextResource, nextResolver, options)))
+        : await resolve(resources, nextResolver, options)
 
-    return [props, data]
-  }))
+      return [props, data]
+    })
+  )
 
   return responses.reduce((result, [props, data]) => merge(result, objectSet(data, props)), obj)
 }

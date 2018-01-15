@@ -5,8 +5,5 @@
  * @returns {boolean} Whether or not the object is valid.
  */
 export default function isObject(obj) {
-  return (
-    obj !== null &&
-    typeof obj === 'object' &&
-    !Array.isArray(obj))
+  return obj !== null && typeof obj === 'object' && !Array.isArray(obj)
 }

@@ -1,4 +1,4 @@
-// Internal packages
+// Internal Packages
 import constants from '../constants'
 
 /**
@@ -22,9 +22,7 @@ export default function objectGet(obj, props) {
 
   if (!(prop in obj)) {
     if (isOpt) {
-      return (isArr)
-        ? []
-        : null
+      return isArr ? [] : null
     }
 
     throw new Error(`RuntimeError: could not get property \`${prop}\``)
@@ -32,7 +30,5 @@ export default function objectGet(obj, props) {
 
   const nextObjs = obj[prop]
 
-  return (isArr)
-    ? nextObjs.map(nextObj => objectGet(nextObj, nextProps))
-    : objectGet(nextObjs, nextProps)
+  return isArr ? nextObjs.map(nextObj => objectGet(nextObj, nextProps)) : objectGet(nextObjs, nextProps)
 }

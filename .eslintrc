@@ -7,15 +7,9 @@
   },
   "extends": [
     "airbnb",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
   ],
   "parser": "babel-eslint",
-  "plugins": [
-    "jest"
-  ],
-  "root": true,
-  "rules": {
-    "max-len": ["error", 120],
-    "semi": ["error", "never"]
-  }
+  "root": true
 }
