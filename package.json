@@ -1,6 +1,6 @@
 {
   "name": "restql",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "RESTful API Resolver for Nested-Linked Resources | 🕸 🕷",
   "main": "./dist/cjs/index.js",
   "module": "./dist/es/index.js",
