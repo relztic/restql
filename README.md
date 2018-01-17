@@ -138,6 +138,8 @@ const options = {
 })()
 ```
 
+[Test RestQL in your browser.](https://npm.runkit.com/restql/)
+
 ## Roadmap
 
   - ~~Update package dependencies~~
