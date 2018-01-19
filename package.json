@@ -15,7 +15,7 @@
     "lint:es:fix": "npm run lint:es -- --fix",
     "lint:markdown": "markdownlint $(find . -type f -name \"*.md\" -not \\( -path \"./.github/*\" -o -path \"./node_modules/*\" \\))",
     "test": "npm run test:code:coverage",
-    "test:code": "cross-env BABEL_ENV=development jest",
+    "test:code": "cross-env BABEL_ENV=test jest",
     "test:code:coverage": "npm run test:code -- --coverage",
     "build": "npm run build:cjs && npm run build:es && npm run build:umd && npm run build:umd:min",
     "build:cjs": "cross-env BABEL_ENV=production FMT=cjs NODE_ENV=development rollup --config",

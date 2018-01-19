@@ -23,6 +23,15 @@
           "modules": false
         }]
       ]
+    },
+    "test": {
+      "plugins": [
+        "transform-object-rest-spread",
+        "transform-runtime"
+      ],
+      "presets": [
+        "env"
+      ]
     }
   }
 }
