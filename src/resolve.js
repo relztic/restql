@@ -1,8 +1,9 @@
 // External Packages
-import axios from 'axios'
+import cloneDeep from 'lodash/cloneDeep'
 import merge from 'lodash/merge'
 
 // Internal Packages
+import fetchResource from './utils/fetchResource'
 import isResource from './utils/isResource'
 import objectGet from './utils/objectGet'
 import objectSet from './utils/objectSet'
@@ -26,7 +27,7 @@ export default async function resolve(resource, resolver, options) {
     throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``)
   }
 
-  const response = await axios(resource, options)
+  const response = cloneDeep(await fetchResource(resource, options))
 
   if (!response.config.validateStatus(response.status)) {
     throw new Error(`RuntimeError: could not fetch resource \`${resource}\``)

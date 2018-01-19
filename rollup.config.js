@@ -32,7 +32,7 @@ const IS_PRODUCTION = NODE_ENV === 'production'
 export default {
   input: pkg.src,
   ...((IS_CJS || IS_ES) && {
-    external: ['axios', 'babel-runtime/regenerator', 'lodash/merge', 'url-regex'],
+    external: ['axios', 'babel-runtime/regenerator', 'lodash/cloneDeep', 'lodash/merge', 'md5', 'url-regex'],
     output: {
       file: IS_CJS ? pkg.main : pkg.module,
       format: FMT,
