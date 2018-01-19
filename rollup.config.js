@@ -15,7 +15,14 @@ import pkg from './package.json'
 pkg.src = './src/index.js'
 pkg.dist = './dist/umd/index.js'
 
+/**
+ * @constant {string} * The environmental settings.
+ */
 const { FMT, NODE_ENV } = process.env
+
+/**
+ * @constant {boolean} * The conditional constants.
+ */
 const IS_CJS = FMT === 'cjs'
 const IS_ES = FMT === 'es'
 const IS_UMD = FMT === 'umd'

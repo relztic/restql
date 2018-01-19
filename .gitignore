@@ -1,5 +1,5 @@
 # Node.js
-node_modules
+node_modules/
 
 # npm
 npm-debug.log
@@ -10,14 +10,14 @@ yarn-debug.log
 yarn-error.log
 
 # Mixed
-.idea
+.idea/
 .DS_Store
 
 # Coverage
-coverage
+coverage/
 
 # Production
-dist
+dist/
 
 # rollup.js
 stats.html
