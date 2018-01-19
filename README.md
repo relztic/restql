@@ -142,10 +142,10 @@ const options = {
 
 ## Roadmap
 
-  - ~~Update package dependencies~~
   - ~~Support for authentication~~
   - ~~Support for optional resolvers~~
   - ~~Improve package bundler~~
-  - Ability to cache responses
+  - ~~Ability to cache responses~~
+  - Support for recursive resolvers
 
 Take :cake:, Folks! :taco: :horse: :dash:
