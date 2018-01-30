@@ -18,10 +18,10 @@
     "test:code": "cross-env BABEL_ENV=test jest",
     "test:code:coverage": "npm run test:code -- --coverage",
     "build": "npm run build:cjs && npm run build:es && npm run build:umd && npm run build:umd:min",
-    "build:cjs": "cross-env BABEL_ENV=production FMT=cjs NODE_ENV=development rollup --config",
-    "build:es": "cross-env BABEL_ENV=production FMT=es NODE_ENV=development rollup --config",
-    "build:umd": "cross-env BABEL_ENV=production FMT=umd NODE_ENV=development rollup --config",
-    "build:umd:min": "cross-env BABEL_ENV=production FMT=umd NODE_ENV=production rollup --config"
+    "build:cjs": "cross-env BABEL_ENV=production NODE_ENV=development RESTQL_BUILD_FMT=cjs rollup --config",
+    "build:es": "cross-env BABEL_ENV=production NODE_ENV=development RESTQL_BUILD_FMT=es rollup --config",
+    "build:umd": "cross-env BABEL_ENV=production NODE_ENV=development RESTQL_BUILD_FMT=umd rollup --config",
+    "build:umd:min": "cross-env BABEL_ENV=production NODE_ENV=production RESTQL_BUILD_FMT=umd rollup --config"
   },
   "repository": {
     "type": "git",

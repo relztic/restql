@@ -18,16 +18,16 @@ pkg.dist = './dist/umd/index.js'
 /**
  * @constant {string} * The environmental settings.
  */
-const { FMT, NODE_ENV } = process.env
+const { NODE_ENV, RESTQL_BUILD_FMT } = process.env
 
 /**
  * @constant {boolean} * The conditional constants.
  */
-const IS_CJS = FMT === 'cjs'
-const IS_ES = FMT === 'es'
-const IS_UMD = FMT === 'umd'
 const IS_DEVELOPMENT = NODE_ENV === 'development'
 const IS_PRODUCTION = NODE_ENV === 'production'
+const IS_CJS = RESTQL_BUILD_FMT === 'cjs'
+const IS_ES = RESTQL_BUILD_FMT === 'es'
+const IS_UMD = RESTQL_BUILD_FMT === 'umd'
 
 export default {
   input: pkg.src,
@@ -35,14 +35,14 @@ export default {
     external: ['axios', 'babel-runtime/regenerator', 'lodash/cloneDeep', 'lodash/merge', 'md5', 'url-regex'],
     output: {
       file: IS_CJS ? pkg.main : pkg.module,
-      format: FMT,
+      format: RESTQL_BUILD_FMT,
     },
     plugins: [babel()],
   }),
   ...(IS_UMD && {
     output: {
       file: IS_DEVELOPMENT ? pkg.dist : pkg.dist.replace('.js', '.min.js'),
-      format: FMT,
+      format: RESTQL_BUILD_FMT,
       name: pkg.name,
     },
     plugins: [
@@ -58,7 +58,8 @@ export default {
       }),
       globals(),
       babel(),
-      IS_PRODUCTION ? uglify() : visualizer(),
-    ],
+      IS_DEVELOPMENT && visualizer(),
+      IS_PRODUCTION && uglify(),
+    ].filter(Boolean),
   }),
 }
