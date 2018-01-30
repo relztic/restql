@@ -6,9 +6,9 @@ import isResolver from './utils/isResolver'
 /**
  * Resolves the nested-linked resources of a RESTful API.
  *
- * @param {string} resource The resource to fetch.
- * @param {Object} resolver The resolver to apply.
- * @param {Object} options  The options to bypass.
+ * @param {string} resource  The resource to fetch.
+ * @param {Object} resolver  The resolver to apply.
+ * @param {Object} [options] The options to bypass.
  * @returns {Promise<Object>} A promise which resolves into an object.
  * @throws {InvalidArgumentError} If the resolver is invalid.
  * @throws {InvalidArgumentError} If the options is invalid.
