@@ -2,6 +2,7 @@
   "env": {
     "development": {
       "plugins": [
+        "transform-export-extensions",
         "transform-object-rest-spread",
         "transform-runtime"
       ],
@@ -12,6 +13,7 @@
     "production": {
       "plugins": [
         "external-helpers",
+        "transform-export-extensions",
         "transform-object-rest-spread",
         ["transform-runtime", {
           "helpers": false,
@@ -26,6 +28,7 @@
     },
     "test": {
       "plugins": [
+        "transform-export-extensions",
         "transform-object-rest-spread",
         "transform-runtime"
       ],

@@ -6,7 +6,7 @@ node_js:
 cache:
   yarn: true
   directories:
-    - ./node_modules/
+    - node_modules/
 
 before_script:
   - curl --location https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter

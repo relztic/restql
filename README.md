@@ -1,6 +1,6 @@
 # RestQL.js
 
-RESTful API Resolver for Nested-Linked Resources | :spider_web: :spider:
+RESTful API Resolver for Nested-Linked Resources | 🕸 🕷
 
 ---
 
@@ -64,10 +64,12 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 
 **Quantifiers**
 
-| Quantifier | Description               |
-| ---------- | ------------------------- |
-| `[]`       | Collection of properties. |
-| `?`        | Optional property.        |
+Following is a table of the quantifiers you can use:
+
+| Quantifier | Description |
+| --- | --- |
+| `[]` | Collection of properties. |
+| `?` | Optional property. |
 
 **e.g.:**
 
@@ -148,4 +150,4 @@ const options = {
   - ~~Ability to cache responses~~
   - Support for recursive resolvers
 
-Take :cake:, Folks! :taco: :horse: :dash:
+Take 🍰, Folks! 🌮 🐴 💨
