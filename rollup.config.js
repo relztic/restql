@@ -18,16 +18,16 @@ pkg.dist = './dist/umd/index.js'
 /**
  * @constant {string} * The environmental settings.
  */
-const { NODE_ENV, RESTQL_BUILD_FMT } = process.env
+const { NODE_ENV, RESTQL_FMT } = process.env
 
 /**
  * @constant {boolean} * The conditional constants.
  */
 const IS_DEVELOPMENT = NODE_ENV === 'development'
 const IS_PRODUCTION = NODE_ENV === 'production'
-const IS_CJS = RESTQL_BUILD_FMT === 'cjs'
-const IS_ES = RESTQL_BUILD_FMT === 'es'
-const IS_UMD = RESTQL_BUILD_FMT === 'umd'
+const IS_CJS = RESTQL_FMT === 'cjs'
+const IS_ES = RESTQL_FMT === 'es'
+const IS_UMD = RESTQL_FMT === 'umd'
 
 export default {
   input: pkg.src,
@@ -35,14 +35,14 @@ export default {
     external: ['axios', 'babel-runtime/regenerator', 'lodash/cloneDeep', 'lodash/merge', 'md5', 'url-regex'],
     output: {
       file: IS_CJS ? pkg.main : pkg.module,
-      format: RESTQL_BUILD_FMT,
+      format: RESTQL_FMT,
     },
     plugins: [babel()],
   }),
   ...(IS_UMD && {
     output: {
       file: IS_DEVELOPMENT ? pkg.dist : pkg.dist.replace('.js', '.min.js'),
-      format: RESTQL_BUILD_FMT,
+      format: RESTQL_FMT,
       name: pkg.name,
     },
     plugins: [
