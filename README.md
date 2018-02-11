@@ -110,8 +110,14 @@ Following is a table of the quantifiers you can use:
 // External Packages
 import restql from 'restql'
 
+/**
+ * @constant {string} resource The resource to fetch.
+ */
 const resource = 'https://pokeapi.co/api/v2/pokemon/1/'
 
+/**
+ * @constant {Object} resolver The resolver to apply.
+ */
 const resolver = {
   'abilities[]?.ability.url': {
     'generation.url': {
@@ -125,15 +131,18 @@ const resolver = {
   'moves[].move?.url': null,
 }
 
+/**
+ * @constant {Object} options The options to bypass.
+ */
 const options = {
   // ...
 };
 
 (async () => {
   try {
-    const result = await restql(resource, resolver, options)
+    const data = await restql(resource, resolver, options)
 
-    console.log(result)
+    console.log(data)
   } catch (error) {
     console.error(error.message)
   }
