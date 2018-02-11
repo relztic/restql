@@ -17,6 +17,7 @@
     "test": "npm run test:code:coverage",
     "test:code": "cross-env BABEL_ENV=test jest",
     "test:code:coverage": "npm run test:code -- --coverage",
+    "test:code:watch": "npm run test:code -- --watch",
     "build": "npm run build:cjs && npm run build:es && npm run build:umd && npm run build:umd:min",
     "build:cjs": "cross-env BABEL_ENV=production NODE_ENV=development RESTQL_FMT=cjs rollup --config",
     "build:es": "cross-env BABEL_ENV=production NODE_ENV=development RESTQL_FMT=es rollup --config",

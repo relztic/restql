@@ -50,15 +50,9 @@ const config = {
     },
     plugins: [
       builtins(),
-      resolve({
-        browser: true,
-      }),
-      commonjs({
-        exclude: 'src/**',
-      }),
-      json({
-        exclude: 'src/**',
-      }),
+      resolve({ browser: true }),
+      commonjs({ exclude: 'src/**' }),
+      json({ exclude: 'src/**' }),
       globals(),
       babel(),
       IS_DEVELOPMENT && visualizer(),
