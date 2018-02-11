@@ -2,7 +2,7 @@
 import constants from '../constants'
 
 /**
- * Sets the parsed properties from a data.
+ * Sets the parsed properties to an object.
  *
  * @param {Array}  data  The data to use.
  * @param {string} props The properties to apply.

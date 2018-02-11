@@ -1,6 +1,9 @@
 // Internal Packages
 import objectGet from '../objectGet'
 
+/**
+ * @constant {Object} obj The object to use.
+ */
 // prettier-ignore
 const obj = {
   a: [

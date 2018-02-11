@@ -29,7 +29,10 @@ const IS_CJS = RESTQL_FMT === 'cjs'
 const IS_ES = RESTQL_FMT === 'es'
 const IS_UMD = RESTQL_FMT === 'umd'
 
-export default {
+/**
+ * @constant {Object} config The config of the library.
+ */
+const config = {
   input: pkg.src,
   ...((IS_CJS || IS_ES) && {
     external: ['axios', 'babel-runtime/regenerator', 'lodash/cloneDeep', 'lodash/merge', 'md5', 'url-regex'],
@@ -63,3 +66,5 @@ export default {
     ].filter(Boolean),
   }),
 }
+
+export default config

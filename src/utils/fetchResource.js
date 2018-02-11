@@ -8,7 +8,7 @@ import md5 from 'md5'
 const responses = {}
 
 /**
- * Fetches the resource based on its options, if not cached.
+ * Fetches a resource based on its options, if not cached.
  *
  * @param {string} resource The resource to fetch.
  * @param {Object} options  The options to bypass.

@@ -10,8 +10,8 @@ import isResolver from './utils/isResolver'
  * @param {Object} resolver  The resolver to apply.
  * @param {Object} [options] The options to bypass.
  * @returns {Promise<Object>} A promise which resolves into an object.
- * @throws {InvalidArgumentError} If the resolver is invalid.
- * @throws {InvalidArgumentError} If the options is invalid.
+ * @throws {InvalidArgumentError} If a resolver is invalid.
+ * @throws {InvalidArgumentError} If an options are invalid.
  */
 export default async function restql(resource, resolver, options = {}) {
   if (!isObject(resolver) || !isResolver(resolver)) {

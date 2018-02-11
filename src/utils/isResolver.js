@@ -2,10 +2,10 @@
 import constants from '../constants'
 
 /**
- * Determines whether or not the resolver is valid.
+ * Determines whether or not a resolver is valid.
  *
  * @param {Object} resolver The resolver to test.
- * @returns {boolean} Whether or not the resolver is valid.
+ * @returns {boolean} Whether or not a resolver is valid.
  */
 export default function isResolver(resolver) {
   if (!resolver) {
