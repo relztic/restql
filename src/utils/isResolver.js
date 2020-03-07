@@ -21,7 +21,6 @@ export default function isResolver(resolver) {
   return keys
     .map(
       key =>
-        key.includes(constants.PROP_DELIMITER) &&
         !key.startsWith(constants.PROP_DELIMITER) &&
         !key.endsWith(constants.PROP_DELIMITER) &&
         isResolver(resolver[key])

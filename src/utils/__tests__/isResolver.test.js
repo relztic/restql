@@ -33,4 +33,13 @@ describe('isResolver', () => {
 
     expect(isResolver(resolver)).toBe(false)
   })
+
+  it('should return `true` on top-level resolvers', () => {
+    const resolver = {
+      foo: null,
+      bar: null,
+    }
+
+    expect(isResolver(resolver)).toBe(true)
+  })
 })
