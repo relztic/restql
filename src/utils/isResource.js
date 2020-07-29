@@ -1,5 +1,5 @@
 // External Packages
-import validator from 'validator';
+import validator from 'validator'
 
 /**
  * @constant {Object} urlRegex The URL regex to test.
