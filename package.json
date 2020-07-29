@@ -49,6 +49,7 @@
     "babel-runtime": "^6.26.0",
     "lodash": "^4.17.4",
     "md5": "^2.2.1",
+    "safe-regex": "^2.1.1",
     "url-regex": "^4.1.1"
   },
   "devDependencies": {

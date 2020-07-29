@@ -1,4 +1,5 @@
 // External Packages
+const safe = require('safe-regex')
 import UrlRegex from 'url-regex'
 
 /**
@@ -13,5 +14,9 @@ const urlRegex = UrlRegex({ exact: true })
  * @returns {boolean} Whether or not a resource is valid.
  */
 export default function isResource(resource) {
+  if (!safe(resource)) {
+    console.log(`Error: Invalid Regex`)
+    process.exit(1)
+  }
   return urlRegex.test(resource)
 }
