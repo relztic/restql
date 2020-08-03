@@ -1,5 +1,5 @@
 // External Packages
-import UrlRegex from 'url-regex'
+import validator from 'validator'
 
 /**
  * @constant {Object} urlRegex The URL regex to test.
@@ -13,5 +13,5 @@ const urlRegex = UrlRegex({ exact: true })
  * @returns {boolean} Whether or not a resource is valid.
  */
 export default function isResource(resource) {
-  return urlRegex.test(resource)
+  return validator.isURL(resource)
 }
