@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/relztic/restql/#readme",
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.21.1",
     "babel-runtime": "^6.26.0",
     "lodash": "^4.17.4",
     "md5": "^2.2.1",
