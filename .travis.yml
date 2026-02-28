@@ -5,7 +5,7 @@ node_js:
 
 branches:
   only:
-    - master
+    - main
     - /^v\d+\.\d+\.\d+$/
 
 cache:
@@ -17,7 +17,7 @@ before_install:
   - export TRAVIS_SOURCE_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
 
 before_script:
-  - if [ "$TRAVIS_SOURCE_BRANCH" = "master" ]; then
+  - if [ "$TRAVIS_SOURCE_BRANCH" = "main" ]; then
       curl --location https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter;
       chmod +x ./cc-test-reporter;
       ./cc-test-reporter before-build;
@@ -28,7 +28,7 @@ script:
   - yarn run test
 
 after_script:
-  - if [ "$TRAVIS_SOURCE_BRANCH" = "master" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
+  - if [ "$TRAVIS_SOURCE_BRANCH" = "main" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi
 
 notifications:
   email:

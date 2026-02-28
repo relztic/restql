@@ -5,7 +5,7 @@ RESTful API Resolver for Nested-Linked Resources | 🕸 🕷
 ---
 
 [![npm](https://img.shields.io/npm/v/restql.svg?style=flat-square)](https://www.npmjs.com/package/restql/)
-[![build](https://img.shields.io/travis/relztic/restql/master.svg?style=flat-square)](https://travis-ci.org/relztic/restql/)
+[![build](https://img.shields.io/travis/relztic/restql/main.svg?style=flat-square)](https://travis-ci.org/relztic/restql/)
 [![maintainability](https://img.shields.io/codeclimate/maintainability/relztic/restql.svg?style=flat-square)](https://codeclimate.com/github/relztic/restql/maintainability/)
 [![coverage](https://img.shields.io/codeclimate/c/relztic/restql.svg?style=flat-square)](https://codeclimate.com/github/relztic/restql/test_coverage/)
 [![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier/)
