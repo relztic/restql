@@ -3,20 +3,14 @@ node_modules/
 
 # npm
 npm-debug.log
-package-lock.json
 
-# Yarn
-yarn-debug.log
-yarn-error.log
-
-# Mixed
-.idea/
+# Misc
 .DS_Store
 
 # Coverage
 coverage/
 
-# Production
+# Build
 dist/
 
 # rollup.js

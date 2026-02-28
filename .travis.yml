@@ -9,7 +9,7 @@ branches:
     - /^v\d+\.\d+\.\d+$/
 
 cache:
-  yarn: true
+  npm: true
   directories:
     - ./node_modules/
 
@@ -24,8 +24,8 @@ before_script:
     fi
 
 script:
-  - yarn run lint
-  - yarn run test
+  - npm run lint
+  - npm run test
 
 after_script:
   - if [ "$TRAVIS_SOURCE_BRANCH" = "main" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi

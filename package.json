@@ -35,8 +35,7 @@
     "resolver",
     "javascript",
     "node",
-    "npm",
-    "yarn"
+    "npm"
   ],
   "author": "Ariel de Jesús Díaz Sánchez <relztic@gmail.com> (https://www.linkedin.com/in/relztic/)",
   "license": "MIT",
