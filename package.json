@@ -36,7 +36,7 @@
     "node",
     "npm"
   ],
-  "author": "Ariel de Jesús Díaz Sánchez <relztic@gmail.com> (https://www.linkedin.com/in/relztic/)",
+  "author": "Ariel Díaz <relztic@gmail.com> (https://www.linkedin.com/in/relztic/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/relztic/restql/issues/"
