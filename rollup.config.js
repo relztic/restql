@@ -35,7 +35,7 @@ const IS_UMD = RESTQL_FMT === 'umd'
 const config = {
   input: pkg.src,
   ...((IS_CJS || IS_ES) && {
-    external: ['axios', 'babel-runtime/regenerator', 'lodash/cloneDeep', 'lodash/merge', 'md5', 'url-regex'],
+    external: ['axios', 'babel-runtime/regenerator', 'lodash/cloneDeep', 'lodash/merge', 'md5', 'validator/lib/isURL'],
     output: {
       file: IS_CJS ? pkg.main : pkg.module,
       format: RESTQL_FMT,
