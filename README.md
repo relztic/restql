@@ -4,14 +4,10 @@ RESTful API Resolver for Nested-Linked Resources | 🕸 🕷
 
 ---
 
-[![npm](https://img.shields.io/npm/v/restql.svg?style=flat-square)](https://www.npmjs.com/package/restql/)
-[![build](https://img.shields.io/travis/relztic/restql/main.svg?style=flat-square)](https://travis-ci.org/relztic/restql/)
-[![maintainability](https://img.shields.io/codeclimate/maintainability/relztic/restql.svg?style=flat-square)](https://codeclimate.com/github/relztic/restql/maintainability/)
-[![coverage](https://img.shields.io/codeclimate/c/relztic/restql.svg?style=flat-square)](https://codeclimate.com/github/relztic/restql/test_coverage/)
-[![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier/)
+[![npm](https://img.shields.io/npm/v/restql.svg?style=for-the-badge)](https://www.npmjs.com/package/restql/)
+![Prettier](https://img.shields.io/badge/-Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)
 
-RestQL allows you to dynamically resolve the nested-linked resources of a RESTful API.
-
+RestQL allows you to dynamically resolve the nested-linked resources of a RESTful API.  
 By specifying a set of properties to describe the paths.
 
 ## Installation
@@ -50,10 +46,8 @@ Self-explanatory.
 
 **Description**
 
-At each level, each property describes a path to the nested resources within the current one.
-
-RestQL resolves the sames and call the subsequent resolver against them...
-
+At each level, each property describes a path to the nested resources within the current one.  
+RestQL resolves the sames and call the subsequent resolver against them.  
 Until the base case (`null`) is reached; from which it returns back the merged responses.
 
 **Quantifiers**
@@ -143,14 +137,12 @@ const options = {
 })()
 ```
 
-[Test RestQL in your browser.](https://npm.runkit.com/restql/)
-
 ## Roadmap
 
-  - ~~Support for authentication~~
-  - ~~Support for optional resolvers~~
-  - ~~Improve package bundler~~
-  - ~~Ability to cache responses~~
-  - Support for recursive resolvers
+- ~~Support for authentication~~
+- ~~Support for optional resolvers~~
+- ~~Improve package bundler~~
+- ~~Ability to cache responses~~
+- Support for recursive resolvers
 
-Take 🍰, Folks! 🌮 🐴 💨
+Take 🎂, Folks! 🌮 🐴 💨
