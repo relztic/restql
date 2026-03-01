@@ -17,6 +17,7 @@
     "test": "jest --config ./.jest.config.json",
     "test:coverage": "npm run test -- --coverage",
     "test:watch": "npm run test -- --watch",
+    "playground": "BABEL_ENV=development babel-node --config-file ./.babelrc ./playground/index.js",
     "build": "npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:umd:min",
     "build:cjs": "BABEL_ENV=production MODULE_FMT=cjs rollup --config",
     "build:esm": "BABEL_ENV=production MODULE_FMT=esm rollup --config",
@@ -49,6 +50,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
+    "@babel/node": "^7.29.0",
     "@babel/preset-env": "^7.26.0",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-commonjs": "^29.0.0",

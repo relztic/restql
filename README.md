@@ -47,7 +47,7 @@ Self-explanatory.
 
 **Description**
 
-At each level, each property describes a path to the nested resources within the current one.  
+At every level, each property describes a path to the nested resources within the current one.  
 RestQL resolves the sames and call the subsequent resolver against them.  
 Until the base case (`null`) is reached; from which it returns back the merged responses.
 
@@ -83,59 +83,15 @@ Following is a table of the quantifiers you can use:
 
 **Description**
 
-[`Request Config`](https://github.com/axios/axios/tree/v1.13.6#request-config)
-
-**e.g.:**
-
-```js
-{
-  // ...
-}
-```
+[Request Config](https://github.com/axios/axios/tree/v1.13.6#request-config)
 
 ## Usage
 
-```js
-import restql from 'restql'
-
-/**
- * @constant {string} resource The resource to fetch.
- */
-const resource = 'https://pokeapi.co/api/v2/pokemon/1/'
-
-/**
- * @constant {Object} resolver The resolver to apply.
- */
-const resolver = {
-  'abilities[]?.ability.url': {
-    'generation.url': {
-      'main_region.url': null,
-    },
-  },
-  'stats[].stat.url?': {
-    'affecting_natures.increase[].url': null,
-    'affecting_natures.decrease[].url': null,
-  },
-  'moves[].move?.url': null,
-}
-
-/**
- * @constant {Object} options The options to bypass.
- */
-const options = {
-  // ...
-}
-
-;(async () => {
-  try {
-    const data = await restql(resource, resolver, options)
-
-    console.log(data)
-  } catch (error) {
-    console.error(error.message)
-  }
-})()
+```sh
+npm run playground
 ```
+
+[See Playground](https://github.com/relztic/restql/blob/main/playground/index.js)
 
 ## Roadmap
 
