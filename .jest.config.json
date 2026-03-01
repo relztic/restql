@@ -1,5 +1,5 @@
 {
-  "coveragePathIgnorePatterns": ["<rootDir>/src/(constants|index).js", "<rootDir>/node_modules/"],
+  "coveragePathIgnorePatterns": ["<rootDir>/node_modules/", "<rootDir>/src/(constants|index).js"],
   "coverageThreshold": {
     "global": {
       "branches": 100,
