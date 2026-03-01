@@ -1,6 +1,11 @@
 {
+  "useTabs": false,
+  "tabWidth": 2,
   "printWidth": 120,
   "semi": false,
+  "trailingComma": "es5",
   "singleQuote": true,
-  "trailingComma": "es5"
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": ["<BUILTIN_MODULES>", "<THIRD_PARTY_MODULES>", "^[./]"],
+  "importOrderSeparation": true
 }

@@ -1,1 +1,3 @@
-export default from './restql'
+import restql from './restql'
+
+export default restql

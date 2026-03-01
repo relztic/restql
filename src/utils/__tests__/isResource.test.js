@@ -1,4 +1,3 @@
-// Internal Packages
 import isResource from '../isResource'
 
 describe('isResource', () => {

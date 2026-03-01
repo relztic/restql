@@ -1,4 +1,3 @@
-// Internal Packages
 import objectSet from '../objectSet'
 
 describe('objectSet', () => {

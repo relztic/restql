@@ -1,4 +1,3 @@
-// Internal Packages
 import fetchResource from '../fetchResource'
 import isObject from '../isObject'
 

@@ -1,4 +1,3 @@
-// External Packages
 import isURL from 'validator/lib/isURL'
 
 /**

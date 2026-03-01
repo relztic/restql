@@ -1,8 +1,6 @@
-// External Packages
 import cloneDeep from 'lodash/cloneDeep'
 import merge from 'lodash/merge'
 
-// Internal Packages
 import fetchResource from './utils/fetchResource'
 import isResource from './utils/isResource'
 import objectGet from './utils/objectGet'
@@ -39,7 +37,7 @@ export default async function resolve(resource, resolver, options) {
     return obj
   }
 
-  const resourcesObj = Object.keys(resolver).map(props => ({ [props]: objectGet(obj, props) }))
+  const resourcesObj = Object.keys(resolver).map((props) => ({ [props]: objectGet(obj, props) }))
 
   const resourcesArr = Object.entries(resourcesObj.reduce((result, val) => ({ ...result, ...val }), {}))
 
@@ -48,7 +46,7 @@ export default async function resolve(resource, resolver, options) {
       const nextResolver = resolver[props]
 
       const data = Array.isArray(resources)
-        ? await Promise.all(resources.map(async nextResource => resolve(nextResource, nextResolver, options)))
+        ? await Promise.all(resources.map(async (nextResource) => resolve(nextResource, nextResolver, options)))
         : await resolve(resources, nextResolver, options)
 
       return [props, data]

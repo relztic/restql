@@ -1,4 +1,3 @@
-// Internal Packages
 import isResolver from '../isResolver'
 
 describe('isResolver', () => {

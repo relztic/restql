@@ -1,4 +1,3 @@
-// Internal Packages
 import constants from '../constants'
 
 /**
@@ -30,5 +29,5 @@ export default function objectGet(obj, props) {
 
   const nextObjs = obj[prop]
 
-  return isArr ? nextObjs.map(nextObj => objectGet(nextObj, nextProps)) : objectGet(nextObjs, nextProps)
+  return isArr ? nextObjs.map((nextObj) => objectGet(nextObj, nextProps)) : objectGet(nextObjs, nextProps)
 }

@@ -1,4 +1,3 @@
-// Internal Packages
 import constants from '../constants'
 
 /**
@@ -20,7 +19,7 @@ export default function isResolver(resolver) {
 
   return keys
     .map(
-      key =>
+      (key) =>
         !key.startsWith(constants.PROP_DELIMITER) &&
         !key.endsWith(constants.PROP_DELIMITER) &&
         isResolver(resolver[key])

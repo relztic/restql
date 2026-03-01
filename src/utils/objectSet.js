@@ -1,4 +1,3 @@
-// Internal Packages
 import constants from '../constants'
 
 /**
@@ -20,6 +19,6 @@ export default function objectSet(data, props) {
   }
 
   return {
-    [prop]: isArr ? data.map(nextData => objectSet(nextData, nextProps)) : objectSet(data, nextProps),
+    [prop]: isArr ? data.map((nextData) => objectSet(nextData, nextProps)) : objectSet(data, nextProps),
   }
 }

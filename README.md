@@ -5,6 +5,7 @@ RESTful API Resolver for Nested-Linked Resources | 🕸 🕷
 ---
 
 [![npm](https://img.shields.io/npm/v/restql.svg?style=for-the-badge)](https://www.npmjs.com/package/restql/)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F0DB4F?style=for-the-badge&logo=typescript&logoColor=black)
 ![Prettier](https://img.shields.io/badge/-Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)
 
 RestQL allows you to dynamically resolve the nested-linked resources of a RESTful API.  
@@ -54,10 +55,10 @@ Until the base case (`null`) is reached; from which it returns back the merged r
 
 Following is a table of the quantifiers you can use:
 
-| Quantifier | Description |
-| --- | --- |
-| `[]` | Collection of properties. |
-| `?` | Optional property. |
+| Quantifier | Description               |
+| ---------- | ------------------------- |
+| `[]`       | Collection of properties. |
+| `?`        | Optional property.        |
 
 **e.g.:**
 
@@ -82,7 +83,7 @@ Following is a table of the quantifiers you can use:
 
 **Description**
 
-[`Request Config`](https://github.com/axios/axios/#request-config)
+[`Request Config`](https://github.com/axios/axios/tree/v1.13.6#request-config)
 
 **e.g.:**
 
@@ -95,7 +96,6 @@ Following is a table of the quantifiers you can use:
 ## Usage
 
 ```js
-// External Packages
 import restql from 'restql'
 
 /**
@@ -124,9 +124,9 @@ const resolver = {
  */
 const options = {
   // ...
-};
+}
 
-(async () => {
+;(async () => {
   try {
     const data = await restql(resource, resolver, options)
 

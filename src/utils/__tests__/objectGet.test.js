@@ -1,4 +1,3 @@
-// Internal Packages
 import objectGet from '../objectGet'
 
 /**

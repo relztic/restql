@@ -1,4 +1,3 @@
-// Internal Packages
 import resolve from './resolve'
 import isObject from './utils/isObject'
 import isResolver from './utils/isResolver'
