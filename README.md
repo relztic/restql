@@ -25,33 +25,27 @@ npm install restql
 <script src="https://unpkg.com/restql/dist/umd/index.min.js"></script>
 ```
 
-## Parameters
+## Usage
 
-### `resource`
+### `restql(resource, resolver[, options])`
 
-`{string} The resource to fetch.`
+#### Parameters
 
-**Description**
+- `resource` (`string`): The resource to fetch.
+  - Self-explanatory.
 
-Self-explanatory.
-
-**e.g.:**
+##### Example
 
 ```js
 'https://pokeapi.co/api/v2/pokemon/1/'
 ```
 
-### `resolver`
+- `resolver` (`Object`): The resolver to apply.
+  - At every level, each property describes a path to the nested resources within the current one.
+  - RestQL resolves the sames and call the subsequent resolver against them.
+  - Until the base case (`null`) is reached; from which it returns back the merged responses.
 
-`{Object} The resolver to apply.`
-
-**Description**
-
-At every level, each property describes a path to the nested resources within the current one.  
-RestQL resolves the sames and call the subsequent resolver against them.  
-Until the base case (`null`) is reached; from which it returns back the merged responses.
-
-**Quantifiers**
+##### Quantifiers
 
 Following is a table of the quantifiers you can use:
 
@@ -60,7 +54,7 @@ Following is a table of the quantifiers you can use:
 | `[]`       | Collection of properties. |
 | `?`        | Optional property.        |
 
-**e.g.:**
+##### Example
 
 ```js
 {
@@ -77,15 +71,20 @@ Following is a table of the quantifiers you can use:
 }
 ```
 
-### `[options]`
+- `[options]` (`Object`): The options to bypass.
+  - [See `RequestInit`](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)
 
-`{Object} The options to bypass.`
+##### Example
 
-**Description**
+```js
+{ ... }
+```
 
-[`RequestInit`](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)
+#### Returns
 
-## Usage
+(`Promise<Object>`): A promise which resolves into an object.
+
+## Try It
 
 ```sh
 npm run playground
@@ -101,4 +100,4 @@ npm run playground
 - ~~Ability to cache responses~~
 - Support for recursive resolvers
 
-Take 🎂, Folks! 🌮 🐴 💨
+> Take 🎂, Folks! 🌮 🐴 💨
