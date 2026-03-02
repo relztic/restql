@@ -1,5 +1,4 @@
-import cloneDeep from 'lodash/cloneDeep'
-import merge from 'lodash/merge'
+import { merge } from 'es-toolkit'
 
 import fetchResource from './utils/fetchResource'
 import isResource from './utils/isResource'
@@ -25,13 +24,13 @@ export default async function resolve(resource, resolver, options) {
     throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``)
   }
 
-  const response = cloneDeep(await fetchResource(resource, options))
+  const response = (await fetchResource(resource, options)).clone()
 
-  if (!response.config.validateStatus(response.status)) {
+  if (!response.ok) {
     throw new Error(`RuntimeError: could not fetch resource \`${resource}\``)
   }
 
-  const obj = response.data
+  const obj = await response.json()
 
   if (!resolver) {
     return obj

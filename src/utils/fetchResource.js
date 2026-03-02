@@ -1,6 +1,3 @@
-import axios from 'axios'
-import md5 from 'md5'
-
 /**
  * @constant {Object} responses The responses to cache.
  */
@@ -14,10 +11,10 @@ const responses = {}
  * @returns {Promise<Object>} A promise which resolves into an object.
  */
 export default async function fetchResource(resource, options) {
-  const key = md5(`${resource}-${JSON.stringify(options)}`)
+  const key = `${resource}-${JSON.stringify(options)}`
 
   if (!(key in responses)) {
-    responses[key] = axios(resource, options).then((response) => {
+    responses[key] = fetch(resource, options).then((response) => {
       responses[key] = response
 
       return response

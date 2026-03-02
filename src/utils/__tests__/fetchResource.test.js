@@ -1,7 +1,7 @@
 import fetchResource from '../fetchResource'
 import isObject from '../isObject'
 
-jest.mock('axios')
+jest.mock('fetch')
 
 describe('fetchResource', () => {
   it('should return an object on valid args', async () => {

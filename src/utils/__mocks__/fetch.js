@@ -6,12 +6,12 @@ const responses = {
 }
 
 /**
- * Reference: [axios](https://github.com/axios/axios/tree/v1.13.6/)
+ * Reference: [fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch)
  *
  * @param {string} resource The resource to fetch.
  * @returns {Promise<Object>} A promise which resolves into an object.
  */
-export default async function axios(resource) {
+export default async function fetch(resource) {
   return new Promise((resolve) => {
     setTimeout(resolve, 100, responses[resource])
   })

@@ -5,7 +5,6 @@ import commonjs from '@rollup/plugin-commonjs'
 import json from '@rollup/plugin-json'
 import resolve from '@rollup/plugin-node-resolve'
 import terser from '@rollup/plugin-terser'
-import nodePolyfills from 'rollup-plugin-polyfill-node'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 const require = createRequire(import.meta.url)
@@ -35,7 +34,7 @@ const babelPlugin = babel({
 const config = {
   input: './src/index.js',
   ...((IS_CJS || IS_ESM) && {
-    external: ['axios', 'lodash/cloneDeep', 'lodash/merge', 'md5', 'validator/lib/isURL'],
+    external: ['es-toolkit'],
     output: {
       file: IS_CJS ? pkg.main : pkg.module,
       format: MODULE_FMT,
@@ -49,7 +48,6 @@ const config = {
       name: pkg.name,
     },
     plugins: [
-      nodePolyfills(),
       resolve({ browser: true, preferBuiltins: false }),
       commonjs(),
       json(),

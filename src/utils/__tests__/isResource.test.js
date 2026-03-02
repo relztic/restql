@@ -8,7 +8,7 @@ describe('isResource', () => {
   })
 
   it('should return `false` on invalid resources', () => {
-    const resource = 'https://pokeapi.co/api/v2/pokemon/1/ foo bar'
+    const resource = 'https:// invalid.pokeapi.co/api/v2/pokemon/1/?foo=bar'
 
     expect(isResource(resource)).toBe(false)
   })

@@ -1,5 +1,3 @@
-import isURL from 'validator/lib/isURL'
-
 /**
  * Determines whether or not a resource is valid.
  *
@@ -7,5 +5,5 @@ import isURL from 'validator/lib/isURL'
  * @returns {boolean} Whether or not a resource is valid.
  */
 export default function isResource(resource) {
-  return isURL(resource)
+  return Boolean(URL.parse(resource))
 }

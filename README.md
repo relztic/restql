@@ -83,7 +83,7 @@ Following is a table of the quantifiers you can use:
 
 **Description**
 
-[Request Config](https://github.com/axios/axios/tree/v1.13.6#request-config)
+[`RequestInit`](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)
 
 ## Usage
 
