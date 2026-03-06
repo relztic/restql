@@ -1,13 +1,8 @@
 import constants from '../constants'
+import type { Resolver } from '../types'
 
-/**
- * Determines whether or not a resolver is valid.
- *
- * @param {Object} resolver The resolver to test.
- * @returns {boolean} Whether or not a resolver is valid.
- */
-export default function isResolver(resolver) {
-  if (!resolver) {
+export default function isResolver(resolver: Resolver | null): boolean {
+  if (resolver === null) {
     return true
   }
 
@@ -22,7 +17,7 @@ export default function isResolver(resolver) {
       (key) =>
         !key.startsWith(constants.PROP_DELIMITER) &&
         !key.endsWith(constants.PROP_DELIMITER) &&
-        isResolver(resolver[key])
+        isResolver(resolver[key]),
     )
     .reduce((result, val) => result && val, true)
 }

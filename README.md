@@ -5,10 +5,10 @@ RESTful API Resolver for Nested-Linked Resources | 🕸 🕷
 ---
 
 [![npm](https://img.shields.io/npm/v/restql.svg?style=for-the-badge)](https://www.npmjs.com/package/restql/)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F0DB4F?style=for-the-badge&logo=typescript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Prettier](https://img.shields.io/badge/-Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)
 
-RestQL allows you to dynamically resolve the nested-linked resources of a RESTful API.  
+RestQL allows you to dynamically resolve nested-linked resources of a RESTful API.  
 By specifying a set of properties to describe the paths.
 
 ## Installation
@@ -22,7 +22,7 @@ npm install restql
 ### CDN
 
 ```html
-<script src="https://unpkg.com/restql/dist/umd/index.min.js"></script>
+<script src="https://unpkg.com/restql/dist/index.min.js"></script>
 ```
 
 ## Usage
@@ -32,7 +32,6 @@ npm install restql
 #### Parameters
 
 - `resource` (`string`): The resource to fetch.
-  - Self-explanatory.
 
 ##### Example
 
@@ -40,10 +39,10 @@ npm install restql
 'https://pokeapi.co/api/v2/pokemon/1/'
 ```
 
-- `resolver` (`Object`): The resolver to apply.
+- `resolver` ([`Resolver`](https://github.com/relztic/restql/blob/main/src/types.ts#L1)): The resolver to apply.
   - At every level, each property describes a path to the nested resources within the current one.
-  - RestQL resolves the sames and call the subsequent resolver against them.
-  - Until the base case (`null`) is reached; from which it returns back the merged responses.
+  - RestQL parses the same and calls the next resolver against them.
+  - Until the base case (`null`) is reached, from which it returns the merged responses.
 
 ##### Quantifiers
 
@@ -71,8 +70,7 @@ Following is a table of the quantifiers you can use:
 }
 ```
 
-- `[options]` (`Object`): The options to bypass.
-  - [See `RequestInit`](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)
+- `[options]` ([`RequestInit`](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)): The options to bypass.
 
 ##### Example
 
@@ -82,7 +80,7 @@ Following is a table of the quantifiers you can use:
 
 #### Returns
 
-(`Promise<Object>`): A promise which resolves into an object.
+(`Promise<T extends object = Record<string, unknown>>`): A promise which resolves into an object.
 
 ## Try It
 
@@ -90,7 +88,7 @@ Following is a table of the quantifiers you can use:
 npm run playground
 ```
 
-[See Playground](https://github.com/relztic/restql/blob/main/playground/index.js)
+[See Playground](https://github.com/relztic/restql/blob/main/playground/index.ts)
 
 ## Roadmap
 

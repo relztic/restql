@@ -1,17 +1,9 @@
-# Node.js
+# Directories
 node_modules/
-
-# npm
-npm-debug.log
-
-# Misc
-.DS_Store
-
-# Coverage
 coverage/
-
-# Build
 dist/
 
-# rollup.js
+# Files
+.DS_Store
+npm-debug.log
 stats.html
