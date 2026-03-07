@@ -31,7 +31,7 @@ npm install restql
 
 #### Parameters
 
-- `resource` (`string`): The resource to fetch.
+- `resource` (`string`): The main resource to fetch.
 
 ##### Example
 
@@ -40,13 +40,13 @@ npm install restql
 ```
 
 - `resolver` ([`Resolver`](https://github.com/relztic/restql/blob/main/src/types.ts#L1)): The resolver to apply.
-  - At every level, each property describes a path to the nested resources within the current one.
-  - RestQL parses the same and calls the next resolver against them.
-  - Until the base case (`null`) is reached, from which it returns the merged responses.
+  - At every level, each property describes a path to the nested resources within the same.
+  - RestQL fetches all resources and calls the next resolver against them.
+  - Until it reaches the base case (`null`), from which it returns a merged response.
 
 ##### Quantifiers
 
-Following is a table of the quantifiers you can use:
+Following is a table of quantifiers you can use:
 
 | Quantifier | Description               |
 | ---------- | ------------------------- |
@@ -70,7 +70,7 @@ Following is a table of the quantifiers you can use:
 }
 ```
 
-- `[options]` ([`RequestInit`](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)): The options to bypass.
+- `[options]` ([`RequestInit`](https://developer.mozilla.org/en-US/docs/Web/API/RequestInit)): The options to configure.
 
 ##### Example
 
