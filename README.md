@@ -1,4 +1,4 @@
-# RestQL.js
+# RestQL
 
 RESTful API Resolver for Nested-Linked Resources | 🕸 🕷
 
@@ -27,7 +27,7 @@ npm install restql
 
 ## Usage
 
-### `restql(resource, resolver[, options])`
+### `restql<T>(resource, resolver[, options])`
 
 #### Parameters
 
@@ -80,7 +80,7 @@ Following is a table of the quantifiers you can use:
 
 #### Returns
 
-(`Promise<T extends object = Record<string, unknown>>`): A promise which resolves into an object.
+(`Promise<T>`): A promise which resolves into a generic.
 
 ## Try It
 
