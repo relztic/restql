@@ -12,6 +12,8 @@ export default {
   },
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
+    '<rootDir>/coverage/',
+    '<rootDir>/dist/',
     '<rootDir>/src/(constants|index|types).ts',
   ],
 }

@@ -46,12 +46,12 @@
     "recursive",
     "resolver"
   ],
-  "author": "Ariel Díaz <relztic@gmail.com> (https://www.linkedin.com/in/relztic/)",
+  "author": "Ariel Díaz <relztic@gmail.com> (https://www.linkedin.com/in/relztic)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/relztic/restql/issues/"
+    "url": "https://github.com/relztic/restql/issues"
   },
-  "homepage": "https://github.com/relztic/restql/#readme",
+  "homepage": "https://github.com/relztic/restql#readme",
   "dependencies": {
     "es-toolkit": "^1.44.0"
   },

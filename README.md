@@ -4,7 +4,7 @@ RESTful API Resolver for Nested-Linked Resources | 🕸 🕷
 
 ---
 
-[![npm](https://img.shields.io/npm/v/restql.svg?style=for-the-badge)](https://www.npmjs.com/package/restql/)
+[![npm](https://img.shields.io/npm/v/restql.svg?style=for-the-badge)](https://www.npmjs.com/package/restql)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Prettier](https://img.shields.io/badge/-Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)
 
@@ -36,7 +36,7 @@ npm install restql
 ##### Example
 
 ```js
-'https://pokeapi.co/api/v2/pokemon/1/'
+'https://pokeapi.co/api/v2/pokemon/1'
 ```
 
 - `resolver` ([`Resolver`](https://github.com/relztic/restql/blob/main/src/types.ts#L1)): The resolver to apply.

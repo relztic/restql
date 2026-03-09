@@ -7,7 +7,7 @@ interface Pokemon {
   moves: object[]
 }
 
-const resource: string = 'https://pokeapi.co/api/v2/pokemon/1/'
+const resource: string = 'https://pokeapi.co/api/v2/pokemon/1'
 
 const resolver: Resolver = {
   'abilities[]?.ability.url': {
