@@ -4,9 +4,9 @@ RESTful API Resolver for Nested-Linked Resources | 🕸 🕷
 
 ---
 
-[![npm](https://img.shields.io/npm/v/restql.svg?style=for-the-badge)](https://www.npmjs.com/package/restql)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Prettier](https://img.shields.io/badge/-Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)
+[![npm](https://img.shields.io/npm/v/restql?style=for-the-badge)](https://www.npmjs.com/package/restql)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Prettier](https://img.shields.io/badge/Prettier-FF69B4?style=for-the-badge&logo=prettier&logoColor=white)](https://prettier.io/)
 
 RestQL allows you to dynamically resolve nested-linked resources of a RESTful API.  
 By specifying a set of properties to describe the paths.
