@@ -15,19 +15,19 @@ By specifying a set of properties to describe the paths.
 
 ### Package Manager
 
-#### npm
+#### NPM
 
 ```sh
 npm install restql
 ```
 
-#### yarn
+#### Yarn
 
 ```sh
 yarn add restql
 ```
 
-#### pnpm
+#### PNPM
 
 ```sh
 pnpm add restql
@@ -41,7 +41,7 @@ pnpm add restql
 <script src="https://cdn.jsdelivr.net/npm/restql/dist/index.min.js"></script>
 ```
 
-#### unpkg
+#### UNPKG
 
 ```html
 <script src="https://unpkg.com/restql/dist/index.min.js"></script>
