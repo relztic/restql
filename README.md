@@ -13,13 +13,35 @@ By specifying a set of properties to describe the paths.
 
 ## Installation
 
-### npm
+### Package Manager
+
+#### npm
 
 ```sh
 npm install restql
 ```
 
-### CDN
+#### yarn
+
+```sh
+yarn add restql
+```
+
+#### pnpm
+
+```sh
+pnpm add restql
+```
+
+### Content Delivery Network
+
+#### jsDelivr
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/restql/dist/index.min.js"></script>
+```
+
+#### unpkg
 
 ```html
 <script src="https://unpkg.com/restql/dist/index.min.js"></script>
@@ -82,10 +104,10 @@ Following is a table of quantifiers you can use:
 
 (`Promise<T>`): A promise which resolves into a generic.
 
-## Try It
+## Try It Out
 
 ```sh
-npm run playground
+pnpm run playground
 ```
 
 [See Playground](https://github.com/relztic/restql/blob/main/playground/index.ts)

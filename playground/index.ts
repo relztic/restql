@@ -32,6 +32,6 @@ const options: RequestInit = {
 
     console.log(pokemon.name)
   } catch (error) {
-    console.error(error.message)
+    console.error(error)
   }
 })()

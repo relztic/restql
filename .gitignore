@@ -5,5 +5,5 @@ dist/
 
 # Files
 .DS_Store
-npm-debug.log
+pnpm-debug.log
 stats.html
