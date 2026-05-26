@@ -54,32 +54,29 @@
   },
   "homepage": "https://github.com/relztic/restql#readme",
   "dependencies": {
-    "es-toolkit": "^1.44.0"
+    "es-toolkit": "^1.47.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/jest": "^30.0.0",
-    "@types/node": "^25.5.2",
-    "eslint": "^10.0.3",
+    "@types/node": "^25.9.1",
+    "eslint": "^10.4.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-flat-config-airbnb": "^2.0.5",
     "eslint-import-resolver-typescript": "^4.4.4",
-    "eslint-plugin-jest": "^29.15.0",
+    "eslint-plugin-jest": "^29.15.2",
     "eslint-plugin-prettier": "^5.5.5",
-    "globals": "^17.3.0",
-    "jest": "^30.2.0",
-    "prettier": "^3.8.1",
-    "rollup": "^4.59.0",
-    "rollup-plugin-dts": "^6.3.0",
+    "globals": "^17.6.0",
+    "jest": "^30.4.2",
+    "prettier": "^3.8.3",
+    "rollup": "^4.60.4",
+    "rollup-plugin-dts": "^6.4.1",
     "rollup-plugin-esbuild": "^6.2.1",
-    "rollup-plugin-visualizer": "^7.0.0",
-    "ts-jest": "^29.4.6",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1"
-  },
-  "overrides": {
-    "serialize-javascript": "^7.0.3"
+    "rollup-plugin-visualizer": "^7.0.1",
+    "ts-jest": "^29.4.11",
+    "tsx": "^4.22.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.60.0"
   }
 }
