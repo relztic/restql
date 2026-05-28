@@ -11,10 +11,6 @@ export default async function resolve(
   resolver: Resolver | null,
   options: RequestInit,
 ): Promise<Record<string, unknown> | null> {
-  if (!resource) {
-    return null
-  }
-
   if (!isResource(resource)) {
     throw new Error(`InvalidArgumentError: invalid resource \`${resource}\``)
   }
