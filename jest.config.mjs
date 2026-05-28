@@ -2,6 +2,10 @@ export default {
   transform: {
     '^.+\\.ts$': 'ts-jest',
   },
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.ts',
+    '!<rootDir>/src/(constants|index|types).ts',
+  ],
   coverageThreshold: {
     global: {
       branches: 100,
@@ -10,10 +14,4 @@ export default {
       statements: 100,
     },
   },
-  coveragePathIgnorePatterns: [
-    '<rootDir>/node_modules/',
-    '<rootDir>/coverage/',
-    '<rootDir>/dist/',
-    '<rootDir>/src/(constants|index|types).ts',
-  ],
 }
