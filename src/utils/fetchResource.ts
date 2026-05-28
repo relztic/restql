@@ -1,4 +1,4 @@
-const responses: Record<string, Promise<Response> | Response> = {}
+const responses = new Map<string, Promise<Response>>()
 
 export default async function fetchResource(
   resource: string,
@@ -6,13 +6,23 @@ export default async function fetchResource(
 ): Promise<Response> {
   const key = `${resource}-${JSON.stringify(options)}`
 
-  if (!(key in responses)) {
-    responses[key] = fetch(resource, options).then((response) => {
-      responses[key] = response
+  if (!responses.has(key)) {
+    const response = fetch(resource, options)
+      .then((nextResponse: Response) => {
+        if (!nextResponse.ok) {
+          responses.delete(key)
+        }
 
-      return response
-    })
+        return nextResponse
+      })
+      .catch((error: Error) => {
+        responses.delete(key)
+
+        throw error
+      })
+
+    responses.set(key, response)
   }
 
-  return responses[key]
+  return responses.get(key) as Promise<Response>
 }
