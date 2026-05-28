@@ -1,14 +1,31 @@
 import objectSet from '../objectSet'
 
-describe('objectSet', () => {
-  it('should return an object on valid args', () => {
-    // prettier-ignore
-    const data = [
-      [[1, -1], [2, -2], [3, -3]],
-      [[4, -4], [5, -5], [6, -6]],
-      [[7, -7], [8, -8], [9, -9]],
-    ]
+// prettier-ignore
+const data = [
+  [[1, -1], [2, -2], [3, -3]],
+  [[4, -4], [5, -5], [6, -6]],
+  [[7, -7], [8, -8], [9, -9]],
+]
 
+describe('objectSet', () => {
+  it('should return an object on valid args - a[]', () => {
+    const props = 'a[]'
+
+    const received = objectSet(data, props)
+
+    // prettier-ignore
+    const expected = {
+      a: [
+        [[1, -1] , [2, -2] , [3, -3]],
+        [[4, -4] , [5, -5] , [6, -6]],
+        [[7, -7] , [8, -8] , [9, -9]],
+      ],
+    }
+
+    expect(received).toEqual(expected)
+  })
+
+  it('should return an object on valid args - a[].b[].c', () => {
     const props = 'a[].b[].c'
 
     const received = objectSet(data, props)

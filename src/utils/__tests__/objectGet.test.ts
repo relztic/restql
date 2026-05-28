@@ -1,7 +1,7 @@
 import objectGet from '../objectGet'
 
 // prettier-ignore
-const obj = {
+const data = {
   a: [
     { b: [{ c: [1, -1] }, {}, { c: [3, -3] }] },
     {},
@@ -10,10 +10,22 @@ const obj = {
 }
 
 describe('objectGet', () => {
+  it('should throw an error on invalid args', () => {
+    const props = 'a[].e[].c'
+
+    const received = () => {
+      objectGet(data, props)
+    }
+
+    const expected = 'RuntimeError: could not get property `e`'
+
+    expect(received).toThrow(expected)
+  })
+
   it('should return an array on valid args', () => {
     const props = 'a[].b[]?.c?'
 
-    const received = objectGet(obj, props)
+    const received = objectGet(data, props)
 
     // prettier-ignore
     const expected = [
@@ -23,17 +35,5 @@ describe('objectGet', () => {
     ]
 
     expect(received).toEqual(expected)
-  })
-
-  it('should throw an error on invalid args', () => {
-    const props = 'a[].e[].c'
-
-    const received = () => {
-      objectGet(obj, props)
-    }
-
-    const expected = 'RuntimeError: could not get property `e`'
-
-    expect(received).toThrow(expected)
   })
 })
